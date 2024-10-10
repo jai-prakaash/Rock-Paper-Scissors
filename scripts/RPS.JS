@@ -1,4 +1,5 @@
 
+        
 let score = 
 JSON.parse(localStorage.getItem('score'))|| {
   wins: 0,
@@ -86,10 +87,11 @@ if (result === 'You Win.') {
 document.querySelector('.js-result').innerHTML = result ;
 
 
-document.querySelector('.js-moves').innerHTML = `you
-<img src="images/${playerMove}-emoji.png"  class="move-icon">
-<img src="images/${computerMove}-emoji.png" class="move-icon">
-computer`;
+document.querySelector('.js-moves').innerHTML = `<div class="flex   justify-center "> <p class=" flex self-center"> You </p> 
+<img  src="images/${playerMove}-emoji.png"  class="text-white rounded-full overflow-hidden h-12  sm:h-20 sm:w-20 ml-3 mr-3 ">
+<img src="images/${computerMove}-emoji.png" class="text-white rounded-full overflow-hidden h-12 sm:h-20 sm:w-20 ml-3 mr-3">
+
+<p class=" flex self-center"> Computer </p></div> `;
 
 
 localStorage.setItem('score', JSON.stringify(score));
